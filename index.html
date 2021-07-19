@@ -13,6 +13,7 @@
       }
       .parent {
         position: relative;
+        border: 2px solid;
         height: 100vh;
       }
       .center {
@@ -28,10 +29,10 @@
         border: 2px solid #43fffb;
         font-size: 18px;
         background-color: transparent;
-        border-radius: 4px;
+        border-radius: 4px 8px 8px 6px;
         font-weight: 200;
       }
-      .display{
+      .display {
         text-align: center;
         margin: 20px 0;
         font-size: 24px;
@@ -46,12 +47,9 @@
       </div>
     </div>
 
-    
-    
-    
     <script>
-        const button = document.getElementById('btn')
-        button.addEventListener('click', randomHexColor)
+      const button = document.getElementById("btn");
+      button.addEventListener("click", randomHexColor);
 
       function randomHexColor() {
         const hexArr = [
@@ -75,8 +73,8 @@
         for (let i = 0; i < 6; i++) {
           h += hexArr[Math.floor(Math.random() * hexArr.length)];
         }
-        document.body.style.backgroundColor = h
-        document.querySelector('.display').innerHTML = h
+        document.body.style.backgroundColor = h;
+        document.querySelector(".display").innerHTML = h;
         console.log(h);
       }
       randomHexColor();
